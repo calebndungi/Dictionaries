@@ -39,18 +39,35 @@ namespace Two_Strings
                 }
             }
 
-            foreach(char c in str2)
+            foreach (char c in str2)
             {
-                if (dict.ContainsKey())
+                if (dict.ContainsKey(c))
                 {
-
+                    return "YES";
                 }
+                    
             }
+
+            return "NO";
 
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("///////Given two strings, determine if they share a common substring. A substring may be as small as one character.////////// \n");
+
+            string str1 = "hello";
+
+            string str2 = "World";
+
+            Console.WriteLine("String 1: " + str1);
+
+            Console.WriteLine("String 2: " + str2);
+
+            string result = twoStrings(str1, str2);
+
+            Console.WriteLine("Do they share common substring? : {0}", result);
+
+            Console.ReadLine();
         }
     }
 }
